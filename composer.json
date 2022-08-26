@@ -1,0 +1,8 @@
+{
+    "name": "hexlet/code",
+    "description": "first porject",
+    "type": "project",
+    "license": "mib",
+    "minimum-stability": "beta",
+    "require": {}
+}
