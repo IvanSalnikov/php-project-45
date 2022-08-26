@@ -2,7 +2,8 @@
     "name": "hexlet/code",
     "description": "first porject",
     "type": "project",
-    "license": "mib",
+    "bin": "bin/brain-games",
+    "license": "proprietary",
     "minimum-stability": "beta",
     "require": {}
 }
