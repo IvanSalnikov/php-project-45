@@ -1,5 +1,7 @@
 <?php
 
+// phpcs:disable PSR1.Files.SideEffects
+
 namespace BrainGames\Cli;
 
 require_once __DIR__ . "/../vendor/autoload.php";
@@ -13,4 +15,3 @@ function greeting()
     $name = prompt('May I have your name?');
     line('Hello, %s!', $name);
 }
-

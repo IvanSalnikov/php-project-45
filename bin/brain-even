@@ -1,0 +1,9 @@
+#!/usr/bin/env php
+<?php
+
+require_once $autoloadPath2 = __DIR__ . '/../vendor/autoload.php';
+
+use function BrainEven\Parity\gameIsParity;
+
+gameIsParity();
+
