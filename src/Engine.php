@@ -7,7 +7,7 @@ require_once __DIR__ . "/../vendor/autoload.php";
 use function cli\line;
 use function cli\prompt;
 
-function strings($nameOfGame)
+function strings(string $nameOfGame)
 {
     if ($nameOfGame === 'Parity') {
         line('Answer "yes" if the number is even, otherwise answer "no".');
@@ -22,7 +22,7 @@ function strings($nameOfGame)
     }
 }
 
-function checker($namespace, $function)
+function checker(string $namespace, string $function)
 {
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
@@ -30,7 +30,9 @@ function checker($namespace, $function)
     strings($namespace);
     $link = "BrainGames\Games\\$namespace\\$function";
     for ($numOfTheQuestion = 1; $numOfTheQuestion <= 3; $numOfTheQuestion++) {
-        $callFunction = call_user_func($link);
+        if (is_callable($link)) {
+            $callFunction = call_user_func($link);
+        }
         if ($callFunction === true) {
             line('Correct!');
         } elseif ($callFunction === false) {
