@@ -3,12 +3,22 @@
     "description": "first porject",
     "type": "project",
     "bin": ["bin/brain-games",
-            "bin/brain-even"],
+            "bin/brain-even",
+            "bin/brain-calc",
+            "bin/brain-gcd",
+            "bin/brain-progression",
+            "bin/brain-prime"],
     "license": "proprietary",
     "minimum-stability": "beta",
     "autoload": {
         "files": ["src/Cli.php",
-                 "src/Parity.php"]
+            "src/Games/Parity.php",
+            "src/Games/Calculator.php",
+            "src/Engine.php",
+            "src/Games/Gcd.php",
+            "src/Games/Progression.php",
+            "src/Games/Prime.php"
+        ]
     },
     "require": {
         "wp-cli/php-cli-tools": "^0.11.15"
