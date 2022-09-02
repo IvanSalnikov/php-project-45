@@ -5,4 +5,5 @@ https://asciinema.org/a/pbHmR8lpdCKr6zjW4kEhwDeuv - ревью игры на ч�
 https://asciinema.org/a/ef80035U8fIkNXEffB449trb0 - ревью калькулятора
 https://asciinema.org/a/iFGAY6oNEduMbYS0T90sktNdv - ревью НОД
 https://asciinema.org/a/jkk9i3r44Mztvbq9Vn2e04qjq - ревью Прогрессия
+https://asciinema.org/a/wixfXZS0nG4LwntoXuKKBNLWl - ревью простое число
 
