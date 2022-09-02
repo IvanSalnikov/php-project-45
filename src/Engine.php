@@ -30,7 +30,7 @@ function checker(string $namespace, string $function)
     strings($namespace);
     $link = "BrainGames\Games\\$namespace\\$function";
     for ($numOfTheQuestion = 1; $numOfTheQuestion <= 3; $numOfTheQuestion++) {
-        if (is_callable($link)) {
+        if (is_callable($link, true, $callFunction)) {
             $callFunction = call_user_func($link);
         }
         if ($callFunction === true) {
