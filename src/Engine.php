@@ -7,21 +7,6 @@ require_once __DIR__ . "/../vendor/autoload.php";
 use function cli\line;
 use function cli\prompt;
 
-function strings(string $nameOfGame)
-{
-    if ($nameOfGame === 'Parity') {
-        line('Answer "yes" if the number is even, otherwise answer "no".');
-    } elseif ($nameOfGame === 'Calculator') {
-        line('What is the result of the expression?');
-    } elseif ($nameOfGame === 'Gcd') {
-        line('Find the greatest common divisor of given numbers.');
-    } elseif ($nameOfGame === 'Progression') {
-        line('What number is missing in the progression?');
-    } elseif ($nameOfGame === 'Prime') {
-        line('Answer "yes" if given number is prime. Otherwise answer "no".');
-    }
-}
-
 function gameEngine(callable $game, string $rules)
 {
     line('Welcome to the Brain Games!');
