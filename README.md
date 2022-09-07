@@ -5,7 +5,7 @@
 Review on game Parity.
 [![asciicast](https://asciinema.org/a/pbHmR8lpdCKr6zjW4kEhwDeuv.svg)](https://asciinema.org/a/pbHmR8lpdCKr6zjW4kEhwDeuv)
 
-Review ob game Calculator
+Review on game Calculator
 [![asciicast](https://asciinema.org/a/ef80035U8fIkNXEffB449trb0.svg)](https://asciinema.org/a/ef80035U8fIkNXEffB449trb0)
 
 Review on game gcd
