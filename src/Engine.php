@@ -22,20 +22,17 @@ function strings(string $nameOfGame)
     }
 }
 
-function checker(string $namespace, string $function)
+function gameEngine(callable $game, string $rules)
 {
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
     line('Hello, %s!', $name);
-    strings($namespace);
-    $link = "BrainGames\Games\\$namespace\\$function";
+    line($rules);
     for ($numOfTheQuestion = 1; $numOfTheQuestion <= 3; $numOfTheQuestion++) {
-        if (is_callable($link, true, $callFunction)) {
-            $callFunction = call_user_func($link);
-        }
-        if ($callFunction === true) {
+        $function = $game();
+        if ($function === true) {
             line('Correct!');
-        } elseif ($callFunction === false) {
+        } elseif ($function === false) {
             line("Let's try again, $name!");
             return;
         }

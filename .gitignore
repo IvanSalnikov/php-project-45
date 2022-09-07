@@ -1,2 +1,4 @@
 /vendor/
-.idea/
+/.idea/
+/.idea/php-project-45.iml
+/.idea/php.xml
