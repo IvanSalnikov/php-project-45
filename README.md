@@ -8,8 +8,7 @@ $ git clone https://github.com/IvanSalnikov/php-project-45.git
 $ cd php-project45
 $ make install
 ```
-
-
+## Game launch
 Review Parity.
 [![asciicast](https://asciinema.org/a/pbHmR8lpdCKr6zjW4kEhwDeuv.svg)](https://asciinema.org/a/pbHmR8lpdCKr6zjW4kEhwDeuv)
 
