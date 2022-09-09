@@ -9,18 +9,19 @@ $ cd php-project45
 $ make install
 ```
 ## Game launch
-Review Parity.
+
+`Review Parity.`
 [![asciicast](https://asciinema.org/a/pbHmR8lpdCKr6zjW4kEhwDeuv.svg)](https://asciinema.org/a/pbHmR8lpdCKr6zjW4kEhwDeuv)
 
-Review Calculator
+`Review Calculator`
 [![asciicast](https://asciinema.org/a/ef80035U8fIkNXEffB449trb0.svg)](https://asciinema.org/a/ef80035U8fIkNXEffB449trb0)
 
-Review gcd
+`Review gcd`
 [![asciicast](https://asciinema.org/a/iFGAY6oNEduMbYS0T90sktNdv.svg)](https://asciinema.org/a/iFGAY6oNEduMbYS0T90sktNdv)
 
-Review Progression
+`Review Progression`
 [![asciicast](https://asciinema.org/a/jkk9i3r44Mztvbq9Vn2e04qjq.svg)](https://asciinema.org/a/jkk9i3r44Mztvbq9Vn2e04qjq)
 
-Review Prime
+`Review Prime`
 [![asciicast](https://asciinema.org/a/wixfXZS0nG4LwntoXuKKBNLWl.svg)](https://asciinema.org/a/wixfXZS0nG4LwntoXuKKBNLWl)
 
