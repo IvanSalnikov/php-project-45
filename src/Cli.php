@@ -1,7 +1,5 @@
 <?php
 
-// phpcs:disable PSR1.Files.SideEffects
-
 namespace BrainGames\Cli;
 
 require_once __DIR__ . "/../vendor/autoload.php";
