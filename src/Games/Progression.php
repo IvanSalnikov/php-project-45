@@ -4,7 +4,7 @@ namespace BrainGames\Games\Progression;
 
 use function BrainGames\Engine\startEngine;
 
-function gameProgression() : void
+function gameProgression(): void
 {
     $task = 'What number is missing in the progression?';
     $gameData = function () {
