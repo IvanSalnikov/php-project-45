@@ -4,7 +4,7 @@ namespace BrainGames\Games\Calculator;
 
 use function BrainGames\Engine\startEngine;
 
-function calculate() : void
+function calculate(): void
 {
     $task = 'What is the result of the expression?';
     $gameData = function () {

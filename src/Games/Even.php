@@ -4,7 +4,7 @@ namespace BrainGames\Games\Even;
 
 use function BrainGames\Engine\startEngine;
 
-function gameEven() : void
+function gameEven(): void
 {
     $task = 'Answer "yes" if the number is even, otherwise answer "no".';
     $gameData = function () {
