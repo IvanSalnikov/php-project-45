@@ -2,16 +2,14 @@
 
 namespace BrainGames\Games\Prime;
 
-use function cli\line;
-use function cli\prompt;
-use function BrainGames\Engine\gameEngine;
+use function BrainGames\Engine\startEngine;
 
-function gamePrime()
+function gamePrime() : void
 {
-    $rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-    $game = function () {
+    $task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+    $gameData = function () {
         $number = rand(0, 100);
-        $answer = prompt("Question: $number");
+        $question = $number;
         $status = true;
         for ($i = 2; $i < $number; $i++) {
             if ($number % $i === 0) {
@@ -19,12 +17,8 @@ function gamePrime()
                 break;
             }
         }
-        $result = $status === true ? 'yes' : 'no';
-        $check = $result === $answer;
-        if ($check === false) {
-            line("'$answer' is wrong answer ;(. Correct answer was '$result'.");
-        }
-        return $check;
+        $trueAnswer = $status === true ? 'yes' : 'no';
+        return [$question, $trueAnswer];
     };
-    gameEngine($game, $rules);
+    startEngine($gameData, $task);
 }

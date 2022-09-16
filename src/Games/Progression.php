@@ -2,14 +2,12 @@
 
 namespace BrainGames\Games\Progression;
 
-use function cli\line;
-use function cli\prompt;
-use function BrainGames\Engine\gameEngine;
+use function BrainGames\Engine\startEngine;
 
-function gameProgression()
+function gameProgression() : void
 {
-    $rules = 'What number is missing in the progression?';
-    $game = function () {
+    $task = 'What number is missing in the progression?';
+    $gameData = function () {
         $firstElement = rand(0, 20);
         $difference = rand(2, 5);
         $emptyElement = rand(0, 9);
@@ -18,16 +16,11 @@ function gameProgression()
             $array [] = $firstElement;
             $firstElement = $firstElement + $difference;
         }
-        $result = $array[$emptyElement];
+        $trueAnswer = $array[$emptyElement];
         $array[$emptyElement] = '..';
         $string = implode(' ', $array);
-        line("Question: $string");
-        $answer = prompt("Your answer");
-        $check = (int)$answer === $result;
-        if ($check === false) {
-            line("'$answer' is wrong answer ;(. Correct answer was '$result'.");
-        }
-        return $check;
+        $question = $string;
+        return [$question, (string) $trueAnswer];
     };
-    gameEngine($game, $rules);
+    startEngine($gameData, $task);
 }

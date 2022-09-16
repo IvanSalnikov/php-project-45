@@ -2,36 +2,30 @@
 
 namespace BrainGames\Games\Calculator;
 
-use function cli\line;
-use function cli\prompt;
-use function BrainGames\Engine\gameEngine;
+use function BrainGames\Engine\startEngine;
 
-function calculate()
+function calculate() : void
 {
-    $rules = 'What is the result of the expression?';
-    $game = function () {
+    $task = 'What is the result of the expression?';
+    $gameData = function () {
         $array = ['+', '-', '*'];
         $numOfSign = rand(0, 2);
         $firstValue = rand(0, 20);
         $secondValue = rand(0, 10);
+
         switch ($array[$numOfSign]) {
             case '+':
-                $result = $firstValue + $secondValue;
+                $trueAnswer = $firstValue + $secondValue;
                 break;
             case '-':
-                $result = $firstValue - $secondValue;
+                $trueAnswer = $firstValue - $secondValue;
                 break;
             case '*':
-                $result = $firstValue * $secondValue;
+                $trueAnswer = $firstValue * $secondValue;
                 break;
         }
-        line("Question: $firstValue $array[$numOfSign] $secondValue");
-        $answer = prompt("Your answer");
-        $comparation = (int)$answer === $result;
-        if ($comparation === false) {
-            line("'$answer' is wrong answer ;(. Correct answer was '$result'.");
-        }
-        return $comparation;
+        $question = "$firstValue $array[$numOfSign] $secondValue";
+        return [$question, (string) $trueAnswer];
     };
-    gameEngine($game, $rules);
+    startEngine($gameData, $task);
 }

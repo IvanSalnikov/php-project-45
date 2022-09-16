@@ -2,27 +2,20 @@
 
 namespace BrainGames\Games\Gcd;
 
-use function cli\line;
-use function cli\prompt;
-use function BrainGames\Engine\gameEngine;
+use function BrainGames\Engine\startEngine;
 
-function gameGcd()
+function gameGcd() : void
 {
-    $rules = 'Find the greatest common divisor of given numbers.';
-    $game = function () {
+    $task = 'Find the greatest common divisor of given numbers.';
+    $gameData = function () {
         $firstItem = rand(1, 100);
         $secondItem = rand(1, 100);
-        line("Question: $firstItem $secondItem");
-        $answer = prompt("Your answer");
+        $question = "$firstItem $secondItem";
         do {
             $firstItem > $secondItem ? $firstItem = $firstItem % $secondItem : $secondItem = $secondItem % $firstItem;
-            $result = $firstItem + $secondItem;
+            $trueAnswer = $firstItem + $secondItem;
         } while ($firstItem != 0 && $secondItem != 0);
-        $check = (int)$answer === $result;
-        if ($check === false) {
-            line("'$answer' is wrong answer ;(. Correct answer was '$result'.");
-        }
-        return $check;
+        return [$question, (string) $trueAnswer];
     };
-    gameEngine($game, $rules);
+    startEngine($gameData, $task);
 }

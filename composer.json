@@ -12,7 +12,7 @@
     "minimum-stability": "beta",
     "autoload": {
         "files": ["src/Cli.php",
-            "src/Games/Parity.php",
+            "src/Games/Even.php",
             "src/Games/Calculator.php",
             "src/Engine.php",
             "src/Games/Gcd.php",
